@@ -1,0 +1,26 @@
+{
+  "source": "https://hypotheken.abnamro.nl/interest-rates/app/?lang=nl",
+  "endpoint": "/api/customer-interest-rates/interest-rates/calculate?inactive=true",
+  "configuration": {
+    "product": "BUDGET",
+    "type": "ANNUITAIR",
+    "energyLabel": "A",
+    "discounts": [
+      {
+        "type": "BANK_ACCOUNT"
+      }
+    ]
+  },
+  "ltv": ">65%-≤85%",
+  "renteblad": "2026-08-19",
+  "rates": {
+    "Variable": "4.05%",
+    "3 years": "3.93%",
+    "5 years": "3.93%",
+    "10 years": "4.14%",
+    "20 years": "4.58%",
+    "30 years": "4.74%"
+  },
+  "retrievedAt": "2026-08-30T00:00:00.000Z",
+  "seededFrom": "Official ABN AMRO browser response captured manually on 2026-08-30"
+}
