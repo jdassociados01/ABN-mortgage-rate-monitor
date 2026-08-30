@@ -4,6 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 6 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - 'package.json'
+      - '.github/workflows/update-rates.yml'
 
 permissions:
   contents: write
