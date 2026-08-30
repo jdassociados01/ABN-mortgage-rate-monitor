@@ -1,0 +1,12 @@
+{
+  "name": "abn-mortgage-rate-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily monitor of official ABN AMRO Budget Annuity renewal mortgage rates",
+  "scripts": {
+    "monitor": "node scripts/fetch-rates.js"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
