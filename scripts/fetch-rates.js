@@ -44,15 +44,28 @@ function normalizeStoredRate(value) {
   if (!Number.isFinite(n) || n <= 0) {
     throw new Error(`Invalid stored interest rate: ${value}`);
   }
-  // Backward compatibility: old history stored percentage points (4.05),
-  // while the Google-Sheets-safe format stores decimals (0.0405).
   return n > 1 ? n / 100 : n;
+}
+
+function amsterdamDate() {
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/Amsterdam',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).formatToParts(new Date());
+
+  const values = Object.fromEntries(parts.map(p => [p.type, p.value]));
+  return `${values.year}-${values.month}-${values.day}`;
 }
 
 function readHistory(filePath) {
   if (!fs.existsSync(filePath)) return new Map();
-  const lines = fs.readFileSync(filePath, 'utf8').trim().split(/\r?\n/);
+  const text = fs.readFileSync(filePath, 'utf8').trim();
+  if (!text) return new Map();
+  const lines = text.split(/\r?\n/);
   if (lines.length <= 1) return new Map();
+
   const map = new Map();
   for (const line of lines.slice(1)) {
     const cells = line.split(',');
@@ -147,8 +160,6 @@ function writeFiles(snapshot, rawData) {
   const dataDir = path.join(process.cwd(), 'data');
   fs.mkdirSync(dataDir, { recursive: true });
 
-  // Store decimal fractions so Google Sheets cannot interpret values such as
-  // "4.05" as a date. Formatting 0.0405 as a percentage yields 4.05%.
   const ratesOnly = snapshot.rates
     .map(r => toDecimal(r.percent).toFixed(4))
     .join('\n') + '\n';
@@ -168,10 +179,14 @@ function writeFiles(snapshot, rawData) {
     currentRows.map(row => row.map(csvEscape).join(',')).join('\n') + '\n'
   );
 
+  // Weekly history is keyed by the actual check date, not by the ABN renteblad date.
+  // If the workflow runs more than once on the same day, that day's row is replaced,
+  // so the history never gets duplicate entries for one weekly checkpoint.
+  const checkDate = amsterdamDate();
   const historyPath = path.join(dataDir, 'history.csv');
   const history = readHistory(historyPath);
   history.set(
-    snapshot.renteblad,
+    checkDate,
     snapshot.rates.map(r => toDecimal(r.percent).toFixed(4))
   );
   const sortedDates = [...history.keys()].sort();
@@ -200,7 +215,6 @@ function writeFiles(snapshot, rawData) {
   };
   fs.writeFileSync(path.join(dataDir, 'status.json'), JSON.stringify(status, null, 2) + '\n');
 
-  // Keep the raw response for auditability, but it only contains public rate data.
   fs.writeFileSync(path.join(dataDir, 'latest-response.json'), JSON.stringify(rawData, null, 2) + '\n');
 }
 
