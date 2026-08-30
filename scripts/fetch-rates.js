@@ -30,9 +30,23 @@ function parsePercent(value) {
   return n;
 }
 
+function toDecimal(percent) {
+  return percent / 100;
+}
+
 function csvEscape(value) {
   const s = String(value);
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+function normalizeStoredRate(value) {
+  const n = Number(String(value).trim());
+  if (!Number.isFinite(n) || n <= 0) {
+    throw new Error(`Invalid stored interest rate: ${value}`);
+  }
+  // Backward compatibility: old history stored percentage points (4.05),
+  // while the Google-Sheets-safe format stores decimals (0.0405).
+  return n > 1 ? n / 100 : n;
 }
 
 function readHistory(filePath) {
@@ -42,7 +56,12 @@ function readHistory(filePath) {
   const map = new Map();
   for (const line of lines.slice(1)) {
     const cells = line.split(',');
-    if (cells.length >= 7) map.set(cells[0], cells.slice(1, 7));
+    if (cells.length >= 7) {
+      map.set(
+        cells[0],
+        cells.slice(1, 7).map(v => normalizeStoredRate(v).toFixed(4))
+      );
+    }
   }
   return map;
 }
@@ -128,12 +147,21 @@ function writeFiles(snapshot, rawData) {
   const dataDir = path.join(process.cwd(), 'data');
   fs.mkdirSync(dataDir, { recursive: true });
 
-  const ratesOnly = snapshot.rates.map(r => r.percent.toFixed(2)).join('\n') + '\n';
+  // Store decimal fractions so Google Sheets cannot interpret values such as
+  // "4.05" as a date. Formatting 0.0405 as a percentage yields 4.05%.
+  const ratesOnly = snapshot.rates
+    .map(r => toDecimal(r.percent).toFixed(4))
+    .join('\n') + '\n';
   fs.writeFileSync(path.join(dataDir, 'rates.csv'), ratesOnly);
 
   const currentRows = [
-    ['Renteblad', 'Period', 'RatePercent', 'LTV'],
-    ...snapshot.rates.map(r => [snapshot.renteblad, r.label, r.percent.toFixed(2), LTV])
+    ['Renteblad', 'Period', 'RateDecimal', 'LTV'],
+    ...snapshot.rates.map(r => [
+      snapshot.renteblad,
+      r.label,
+      toDecimal(r.percent).toFixed(4),
+      LTV
+    ])
   ];
   fs.writeFileSync(
     path.join(dataDir, 'current.csv'),
@@ -142,7 +170,10 @@ function writeFiles(snapshot, rawData) {
 
   const historyPath = path.join(dataDir, 'history.csv');
   const history = readHistory(historyPath);
-  history.set(snapshot.renteblad, snapshot.rates.map(r => r.percent.toFixed(2)));
+  history.set(
+    snapshot.renteblad,
+    snapshot.rates.map(r => toDecimal(r.percent).toFixed(4))
+  );
   const sortedDates = [...history.keys()].sort();
   const historyLines = [
     'Date,Variable,3 years,5 years,10 years,20 years,30 years',
