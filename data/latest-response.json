@@ -1,6 +1,6 @@
 {
   "overbruggingskrediet": "4.75%",
-  "renteblad": "2026-09-21",
+  "renteblad": "2026-10-01",
   "overbruggingskredieten": [
     {
       "duration": 1,
@@ -8,7 +8,7 @@
     },
     {
       "duration": 12,
-      "rate": "5.2%"
+      "rate": "5.3%"
     }
   ],
   "periods": [
@@ -89,31 +89,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.34%"
+          "value": "4.44%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.35%"
+          "value": "4.45%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.4%"
+          "value": "4.5%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.41%"
+          "value": "4.51%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.44%"
+          "value": "4.54%"
         }
       ]
     },
@@ -125,31 +125,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.31%"
+          "value": "4.41%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.4%"
+          "value": "4.5%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.45%"
+          "value": "4.55%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.46%"
+          "value": "4.56%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.48%"
+          "value": "4.58%"
         }
       ]
     },
@@ -161,31 +161,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.29%"
+          "value": "4.39%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.38%"
+          "value": "4.48%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.43%"
+          "value": "4.53%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.44%"
+          "value": "4.54%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.46%"
+          "value": "4.56%"
         }
       ]
     },
@@ -196,31 +196,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.29%"
+          "value": "4.39%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.38%"
+          "value": "4.48%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.43%"
+          "value": "4.53%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.44%"
+          "value": "4.54%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.46%"
+          "value": "4.56%"
         }
       ]
     },
@@ -231,31 +231,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.26%"
+          "value": "4.36%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.56%"
+          "value": "4.66%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.57%"
+          "value": "4.67%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.58%"
+          "value": "4.68%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.59%"
+          "value": "4.69%"
         }
       ]
     },
@@ -267,31 +267,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.22%"
+          "value": "4.32%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.52%"
+          "value": "4.62%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.54%"
+          "value": "4.64%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.56%"
+          "value": "4.66%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.58%"
+          "value": "4.68%"
         }
       ]
     },
@@ -302,31 +302,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.22%"
+          "value": "4.32%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.52%"
+          "value": "4.62%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.54%"
+          "value": "4.64%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.56%"
+          "value": "4.66%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.58%"
+          "value": "4.68%"
         }
       ]
     },
@@ -338,31 +338,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.45%"
+          "value": "4.55%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.7%"
+          "value": "4.8%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.71%"
+          "value": "4.81%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.72%"
+          "value": "4.82%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.73%"
+          "value": "4.83%"
         }
       ]
     },
@@ -373,84 +373,13 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.51%"
-        },
-        {
-          "$type": "ltv",
-          "ltv": "≤65%",
-          "type": "LTV",
-          "value": "4.72%"
-        },
-        {
-          "$type": "ltv",
-          "ltv": ">65%-≤85%",
-          "type": "LTV",
-          "value": "4.83%"
-        },
-        {
-          "$type": "ltv",
-          "ltv": ">85%-≤90%",
-          "type": "LTV",
-          "value": "4.97%"
-        },
-        {
-          "$type": "ltv",
-          "ltv": ">90%",
-          "type": "LTV",
-          "value": "5.04%"
-        }
-      ]
-    },
-    {
-      "duration": 204,
-      "inactive": false,
-      "reflectionPeriod": 24,
-      "type": "FIXED",
-      "rates": [
-        {
-          "type": "NHG",
           "value": "4.61%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.77%"
-        },
-        {
-          "$type": "ltv",
-          "ltv": ">65%-≤85%",
-          "type": "LTV",
-          "value": "4.88%"
-        },
-        {
-          "$type": "ltv",
-          "ltv": ">85%-≤90%",
-          "type": "LTV",
-          "value": "5.02%"
-        },
-        {
-          "$type": "ltv",
-          "ltv": ">90%",
-          "type": "LTV",
-          "value": "5.09%"
-        }
-      ]
-    },
-    {
-      "duration": 240,
-      "inactive": false,
-      "type": "FIXED",
-      "rates": [
-        {
-          "type": "NHG",
-          "value": "4.61%"
-        },
-        {
-          "$type": "ltv",
-          "ltv": "≤65%",
-          "type": "LTV",
-          "value": "4.84%"
+          "value": "4.82%"
         },
         {
           "$type": "ltv",
@@ -462,13 +391,84 @@
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "5.03%"
+          "value": "5.07%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
+          "value": "5.14%"
+        }
+      ]
+    },
+    {
+      "duration": 204,
+      "inactive": false,
+      "reflectionPeriod": 24,
+      "type": "FIXED",
+      "rates": [
+        {
+          "type": "NHG",
+          "value": "4.71%"
+        },
+        {
+          "$type": "ltv",
+          "ltv": "≤65%",
+          "type": "LTV",
+          "value": "4.87%"
+        },
+        {
+          "$type": "ltv",
+          "ltv": ">65%-≤85%",
+          "type": "LTV",
+          "value": "4.98%"
+        },
+        {
+          "$type": "ltv",
+          "ltv": ">85%-≤90%",
+          "type": "LTV",
           "value": "5.12%"
+        },
+        {
+          "$type": "ltv",
+          "ltv": ">90%",
+          "type": "LTV",
+          "value": "5.19%"
+        }
+      ]
+    },
+    {
+      "duration": 240,
+      "inactive": false,
+      "type": "FIXED",
+      "rates": [
+        {
+          "type": "NHG",
+          "value": "4.71%"
+        },
+        {
+          "$type": "ltv",
+          "ltv": "≤65%",
+          "type": "LTV",
+          "value": "4.94%"
+        },
+        {
+          "$type": "ltv",
+          "ltv": ">65%-≤85%",
+          "type": "LTV",
+          "value": "5.03%"
+        },
+        {
+          "$type": "ltv",
+          "ltv": ">85%-≤90%",
+          "type": "LTV",
+          "value": "5.13%"
+        },
+        {
+          "$type": "ltv",
+          "ltv": ">90%",
+          "type": "LTV",
+          "value": "5.22%"
         }
       ]
     },
@@ -479,31 +479,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.83%"
+          "value": "4.93%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.97%"
+          "value": "5.07%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "5.04%"
+          "value": "5.14%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "5.11%"
+          "value": "5.21%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "5.17%"
+          "value": "5.27%"
         }
       ]
     }
