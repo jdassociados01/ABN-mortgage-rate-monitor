@@ -1,6 +1,6 @@
 {
   "overbruggingskrediet": "4.75%",
-  "renteblad": "2026-10-01",
+  "renteblad": "2026-10-13",
   "overbruggingskredieten": [
     {
       "duration": 1,
@@ -273,25 +273,25 @@
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.62%"
+          "value": "4.61%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.64%"
+          "value": "4.62%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.66%"
+          "value": "4.63%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.68%"
+          "value": "4.65%"
         }
       ]
     },
@@ -302,31 +302,31 @@
       "rates": [
         {
           "type": "NHG",
-          "value": "4.32%"
+          "value": "4.27%"
         },
         {
           "$type": "ltv",
           "ltv": "≤65%",
           "type": "LTV",
-          "value": "4.62%"
+          "value": "4.61%"
         },
         {
           "$type": "ltv",
           "ltv": ">65%-≤85%",
           "type": "LTV",
-          "value": "4.64%"
+          "value": "4.62%"
         },
         {
           "$type": "ltv",
           "ltv": ">85%-≤90%",
           "type": "LTV",
-          "value": "4.66%"
+          "value": "4.63%"
         },
         {
           "$type": "ltv",
           "ltv": ">90%",
           "type": "LTV",
-          "value": "4.68%"
+          "value": "4.65%"
         }
       ]
     },
